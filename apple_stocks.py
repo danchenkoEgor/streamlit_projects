@@ -24,7 +24,7 @@ fig = make_subplots(specs=[[{"secondary_y": True}]])
 fig.add_trace(go.Candlestick(x=tickerDf.index, open=tickerDf.Open, high=tickerDf.High,
                 low=tickerDf.Low, close=tickerDf.Close, name="AAPL"), secondary_y=True)
 
-fig.add_trace(go.Bar(x=tickerDf.index, y=tickerDf.Volume, opacity = 0.4, showlegend=False),
+fig.add_trace(go.Bar(x=tickerDf.index, y=tickerDf.Volume, opacity = 0.4, showlegend=False, name = 'Volume'),
                secondary_y=False)
 
 #ema_trace = go.Scatter(x=tickerDf.index, y=tickerDf['120SMA'], mode='lines',
